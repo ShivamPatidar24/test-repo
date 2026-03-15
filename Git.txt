@@ -53,3 +53,7 @@ git reflog <commit-hash>
 git reset --hard <commit-hash>
 git reflog <commit-hash>
 git reset --hard HEAD@{1}
+git branch -M main
+
+
+esme github ka add kkrek ssh key ka add add krke upstream push kese krna wha se code kese lena sb kro
