@@ -21,4 +21,15 @@ git switch BRANCH_NAME
 git switch -c NEW_BRANCH_NAME
 git chechout BRANCH_NAME 
 git chechout -b NEW_BRANCH_NAME
-Merging branches
+Merging branches 
+Fast forword merge
+merge conflict  
+manaual conflict reolsve
+Current branch ka code rakhna (OURS) 
+git checkout --ours second.txt
+git add second.txt
+git commit -m "kept current branch version"
+Incoming branch ka code rakhna (THEIRS)
+git checkout --theirs second.txt
+git add second.txt
+git commit -m "kept incoming branch version"
