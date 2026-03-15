@@ -41,3 +41,15 @@ git tag <tag-name> <commit-hash>
 git push origin <tag-name>
 git tag -d <tag-name>
 git push origin :<tag-name>
+Rebase in git
+git checkout feature-branch
+git rebase main
+git add <resolved-files>
+git rebase --continue
+git reflog
+git reflog <commit-hash>
+
+git reflog <commit-hash>
+git reset --hard <commit-hash>
+git reflog <commit-hash>
+git reset --hard HEAD@{1}
