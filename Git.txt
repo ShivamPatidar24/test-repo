@@ -33,3 +33,11 @@ Incoming branch ka code rakhna (THEIRS)
 git checkout --theirs second.txt
 git add second.txt
 git commit -m "kept incoming branch version"
+Git Tags
+git tag <tag-name>
+git tag -a <tag-name> -m "Release 1.0"
+git tag
+git tag <tag-name> <commit-hash>
+git push origin <tag-name>
+git tag -d <tag-name>
+git push origin :<tag-name>
