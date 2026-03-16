@@ -5,3 +5,5 @@ docker doeman
 docker cli
 docker client 
 docker install he 
+docker install in linux 
+and docker desktop instal  
