@@ -6,4 +6,48 @@ docker cli
 docker client 
 docker install he 
 docker install in linux 
-and docker desktop instal  
+and docker desktop install
+sudo usermod -aG docker $USER 
+newgrp docker
+
+Docker Images
+Docker Container  
+Dockerfile -> docker image ->  docker Container 
+
+dockerfile 
+
+FROM 
+
+WORKDIR 
+
+COPY 
+
+RUN
+ 
+ENTERYPOINT
+
+CMD
+
+
+DOcker ps
+
+docker Images
+
+docker build -t image_name .
+
+docker Container_name stop 
+
+docker run -d -p 80:90 flask_img:latest 
+
+docker logs Container_id
+
+ docker attach Container_id
+
+ docker start Container_id
+
+ docker stop Container_id
+
+ docker exec -it 4718d4460262 bash 
+
+ docker network Container
+ 
