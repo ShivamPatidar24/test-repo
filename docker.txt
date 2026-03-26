@@ -51,3 +51,65 @@ docker logs Container_id
 
  docker network Container
  
+ Docker network  
+ 1. Host  
+ 2. Default Bridge
+ 3. User Defind Bridge (CUstom) 
+ 4. None
+ 5. MACVLAN (Docker swarm)
+ 6. IPVLAN
+ 7. Overlay
+ docker network ls
+ docker network create mynetwork -d bridge 
+ docker pull mysql
+  docker exec -it 302222b74231  mysql -u root -p
+
+  $ docker run -d -p 5000:5000 -e MYSQL_HOST=peaceful_fermat -e MYSQL_USER=root -e MYSQL_PA
+SSWORD=root -e MYSQL_DB=devops mytwo:latest 
+ docker network inspect mynetwork  
+
+ volume and storgae  
+ docker run -d --name mysql --network mynetwork -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DAT
+ABASE=devops mysql
+
+ docker run -d -p 5000:5000 --name flask --network mynetwork -e MYSQL_HOST=mysql  -e MYS
+QL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_DB=devops mytwo:latest 
+
+
+docker run -d --name mysql --network mynetwork -v mydata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql
+
+docker run -d --name mysql --network mynetwork -v /home/shivam/download/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=devops mysql
+
+
+
+Docker Composs 
+docker volume prune -f
+Docker compose up
+docker compose up--build
+docker-compose down -v
+ docker container prune
+
+docker compose down 
+
+ docker system prune
+ docker rmi image_id
+ docker rmi -f $(ocker images-q)
+
+
+docker registry 
+
+docker tag image-name:tag docker_hub_username/image_name:tag
+ docker tag two-tier-flask-app-flask:latest shivampati741/two-tier-flask-app-flask:latest
+
+  docker push shivampati741/two-tier-flask-app-flask:latest
+ 
+
+ docker tag two-tier-flask-app-flask:latest shivampati741/learndocker:latest
+  docker push shivampati741/learndokcer:latest
+  
+
+  multistage docker build
+
+  docker monitoring and logging
+
+  nohup docker attach Container_id &
